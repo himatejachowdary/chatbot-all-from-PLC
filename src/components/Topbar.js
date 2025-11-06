@@ -34,10 +34,39 @@ function Topbar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <a className="nav-link active" aria-current="page" onClick={() => handleNav("/")}>Home</a>
-            <a className="nav-link" onClick={() => handleNav("/Chatbot", true)}>ChatBot</a>
-            <a className="nav-link" onClick={() => handleNav("/Quiz", true)}>Quiz</a>
-            <a className="nav-link" onClick={() => handleNav("/Contact", true)}>Contact</a>
+            {/* Use Link for regular navigation (provides href) to satisfy a11y */}
+            <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+
+            {/* For routes that require auth, use a button styled like a link and include role="link" */}
+            <button
+              type="button"
+              className="nav-link btn-as-link"
+              onClick={() => handleNav("/Chatbot", true)}
+              aria-label="ChatBot"
+              role="link"
+            >
+              ChatBot
+            </button>
+
+            <button
+              type="button"
+              className="nav-link btn-as-link"
+              onClick={() => handleNav("/Quiz", true)}
+              aria-label="Quiz"
+              role="link"
+            >
+              Quiz
+            </button>
+
+            <button
+              type="button"
+              className="nav-link btn-as-link"
+              onClick={() => handleNav("/Contact", true)}
+              aria-label="Contact"
+              role="link"
+            >
+              Contact
+            </button>
           </div>
         </div>
       </div>
