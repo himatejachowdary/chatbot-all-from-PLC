@@ -1,0 +1,78 @@
+.home-container {
+    width: 100%;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    color: white;
+    padding: 60px 0;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  /* About Section */
+  .about {
+    background: #f8f9fa;
+    padding: 50px 0;
+  }
+  
+  .about h2,
+  .features h2,
+  .why-plc h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Features Section */
+  .features {
+    padding: 50px 0;
+  }
+  
+  .features .col-md-6 {
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .features .col-md-6:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Why PLC Section */
+  .why-plc {
+    background: linear-gradient(135deg, #6610f2, #007bff);
+    color: white;
+    padding: 50px 0;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  .animate-slide-in {
+    animation: slideIn 0.8s ease-in-out;
+  }
+  
